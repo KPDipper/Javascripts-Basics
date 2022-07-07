@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+         let d=window. prompt('enter the number')
+        
+        if(d==1){
+            document.write('Sunday')
+        }
+        else if(d==2){
+            document.write('monday')
+        }
+        else if(d==3){
+            document.write('tuesday')
+        }
+        else if(d==4){
+            document.write('wednesday')
+        }
+        else if(d==5){
+            document.write('thursday')
+        }
+        else if(d==6){
+            document.write('friday')
+        }
+        else if(d==7){
+            document.write('saturday')
+        }
+        else{
+            document.write('Invalid number')
+
+        }
+
+      //nested if else
+    //   find the greatest no. among three
+    a=Number(window.prompt('Enter the first number'))
+    b=Number(window.prompt('Enter the second number'))
+    c=Number(window.prompt('Enter the third number'))
+
+    //first compare a and b
+    if(a>b){
+        //a is greater than b,compare a and c
+        if(a>c){
+            document.write('a is grater than b and c')
+        }
+        else{
+            //here c is greater than a whch makes already bigger than b
+            document.write('c is greater than a and b')
+        }
+    }
+    else{
+      //now b is greater than a,compare b and c
+        if(b>c){
+
+            document.write("b is greater than a and c")
+        }
+        else{
+            document.write('c is greater than a and b')
+        }
+    }
+
+
+    </script>
+    
+</body>
+</html>
