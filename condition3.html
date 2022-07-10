@@ -10,7 +10,7 @@
 
 
     <script>
-        //by using logcial operators
+        //by using logcial operators//for multiple ones
     a=Number(window.prompt('Enter the first number'))
     b=Number(window.prompt('Enter the second number'))
     c=Number(window.prompt('Enter the third number'))
@@ -30,6 +30,20 @@
     }
     else{
         document.write('all are equal')
+    }
+
+    year=Number(prompt('enter a year to check'))
+    if(year%400==0){
+        document.write("It's a leap year")
+    }
+    else if(year%100==0){
+        document.write("It's a not leap year")
+    }
+    else if(year%4==0){
+        document.write("It's a leap year")
+    }
+    else{
+        document.write("It's a not leap year")
     }
 
     </script>

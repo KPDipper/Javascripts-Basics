@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- *
+    **
+    ***
+    ****
+    ***** -->
+
+    <!-- 1
+    1 2
+    1 2 3
+    1 2 3 4
+    1 2 3 4 5
+     -->
+
+    <script>
+        for(i=1;i<=5;i++){
+
+            for(j=1;j<=5;j++){
+                if(i<j){
+                    break//so it won't print any code when j is bigger than i
+                }
+                document.write("* ")
+            }
+            document.write("<br>")
+        }
+
+        document.write("<br>")
+        document.write("<br>")
+
+//here we can wwrite this code as below before
+          for(i=1;i<=5;i++){
+
+            for(j=1;j<=5;j++){
+                if(j<=i){
+                    document.write("* ")
+
+                }
+            }
+            document.write("<br>")
+        }
+
+        document.write("<br>")
+        document.write("<br>")
+
+        //here simplyfying this code much better
+
+          for(i=1;i<=5;i++){
+
+            for(j=1;j<=i;j++){
+                // if(j<=i){
+                    document.write("* ")
+
+                // }
+            }
+            document.write("<br>")
+        }
+
+
+        //now differet  pattern
+
+    // 1
+    // 1 2
+    // 1 2 3
+    // 1 2 3 4
+    // 1 2 3 4 5
+    
+        document.write("<br>")
+        document.write("<br>")
+
+
+          for(i=1;i<=5;i++){
+
+            for(j=1;j<=i;j++){
+                    document.write(j," ")
+
+               
+            }
+            document.write("<br>")
+        }
+
+        //now starting from 
+        //5
+        //5 4
+        //5 4 3
+        //5 4 3 2
+        //5 4 3 2 1
+        document.write("<br>")
+        document.write("<br>")
+
+
+          for(i=1;i<=5;i++){
+
+            for(j=1;j<=i;j++){
+                    document.write(6-j," ")
+               
+            }
+            document.write("<br>")
+        }
+
+
+        document.write("<br>")
+        document.write("<br>")
+
+
+          for(i=5;i>=1;i--){
+
+            for(j=5;j>=i;j--){
+                    document.write(j," ")
+               
+            }
+            document.write("<br>")
+        }
+
+    </script>
+
+</body>
+</html>

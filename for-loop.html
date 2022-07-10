@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // for loop is similar nai huncha 
+        //when no. of repeteion is known
+        //if we don't know then use while
+
+
+        //for(init;condition;increment/decrement){
+
+        //statements
+        //}
+
+        for (i = 1; i <= 100; i++) {
+            document.write(i, ' ')
+
+        }
+        document.write("<br>")
+
+        for (i = 100; i >= 1; i--) {
+            document.write(i, '&nbsp;&nbsp;')
+
+        }
+
+        document.write("<br>")
+        document.write("<br>")
+
+
+        //nested for for-loop
+
+
+
+        for (i = 1; i <= 5; i++) {
+
+            for (j = 1; j <= 5; j++) {
+                document.write(i, ",", j, "&nbsp;")
+
+
+            }
+            document.write("<br>")
+
+        }
+
+
+        //break and continue
+        //certain cstate pachi loop end garnu cha
+        
+        document.write("<br>")
+        document.write("<br>")
+
+        for (i = 1; i <= 5; i++) {
+
+            for (j = 1; j <= 5; j++) {
+                // document.write(i, ",", j, "&nbsp;")//eta rkahyo bhane print tai hunhca
+                if(i==j){
+                    break;//loop lai sakadincha//so jaba i=2=j hunhca then j ko loop sidhincha ra naya i ko value suru huncha
+                }
+                document.write(i, ",", j, "&nbsp;")
+
+            }
+            document.write("<br>")
+        }
+
+
+
+        //continue
+        document.write("<br>")
+        document.write("<br>")
+
+        for (i = 1; i <= 5; i++) {
+
+            for (j = 1; j <= 5; j++) {
+                if(i==j){
+                    continue;//yedi i=2=j huncha tyo print hunna tara tespachi ko bhayek print huncha
+                }
+                document.write(i, ",", j, "&nbsp;")
+
+            }
+            document.write("<br>")
+        }
+
+
+// go to pattern.js
+        
+    </script>
+
+</body>
+
+</html>
