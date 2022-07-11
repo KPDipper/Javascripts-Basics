@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+       
+//kunai ni character ko collection lai string baincha
+
+let str="Welcome to JavaScript"
+
+//to concat a string
+//concatetation,+
+str="Hello!" + str
+str=str.concat(" Good Evening")//here abha last ma add hune bhyo
+document.write(str)
+
+
+//length
+let len=str.length
+document.write("<br>Length=",len)
+
+
+
+//slice:(string lai tukra parne)
+//takes two parameter:start index and end index where end index is not included
+
+let str1=str.slice(0,5)//here yesma last index tai include hudena//only includes 0 to 4
+document.write("<br>Slice(0,5)=",str1)
+//here slice ma negative number use huncha last bata
+//only first index  number liyo bhane all include huncha
+
+//substr//here substr(0,5) ima tai index 0 bata suru bhyo ani tespachi 5 wota length cover bhyo
+// substr(start index,length)
+let str2=str.substr(0,9)
+document.write("<br>substr(2,7)",str2)
+//esma ma ni euta matra value liyo bhane sabai lincha
+
+//substring(start index and end index)-end not included
+
+let str3=str.substring(0,5)
+document.write("<br>substring(0,5)",str3)
+//substring ma negative number kam garderna
+//esma ma ni euta matra value liyo bhane sabai lincha
+
+
+
+
+//indexof
+let x="Hello there"
+let found=x.indexOf("ello")
+let hamster=x.lastIndexOf("t")
+document.write("<br>IndexOf:",found)
+document.write("<br>LastIndexOf:",hamster)
+
+// <p>The indexOf() method returns the position of the first occurrence of a specified text:</p>
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
