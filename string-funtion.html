@@ -64,6 +64,53 @@ document.write("<br>LastIndexOf:",hamster)
 
 
 
+//replace
+new_str=str.replace("Hello","Not hello")
+document.write("<br>New String:",new_str)
+
+
+/*
+
+/abc/->regular expression
+/ /->expression literal
+/ /g->global occurence
+/ /i->case sesntive
+/ /ig->case and global 
+*/
+
+let a_new = "Javascript javascript javascript is coding."
+
+ne_str=a_new.replace(/javascript/,"HTML")//here "i" is case sensitive
+ne_str=a_new.replace(/javascript/g,"HTML")
+ne_str=a_new.replace(/javascript/i,"HTML")
+ne_str=a_new.replace(/javascript/ig,"HTML")
+document.write("<br>New Repalce:",ne_str)
+
+
+//matches
+
+
+let str_4="Hello 1"//extra thapyo bhane ni hunhca
+
+//text cha ki chaina ko lagi check garincha
+if(str_4.match(/hello/i)){
+    document.write("<br>The string match each other")
+}
+//includes
+
+
+//to uppercase,tolowercase,trim
+
+document.write("<br>",str_4.toUpperCase())
+document.write("<br>",str_4.toLowerCase())
+
+
+// str_1=str_4.trim()
+// document.write("<br>",str_1)
+
+//charAt:yesma index number dinu parcha
+
+document.write("<br>Character at",str.charAt(12))
 
 
     </script>
