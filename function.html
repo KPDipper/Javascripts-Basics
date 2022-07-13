@@ -11,6 +11,10 @@
 <body>
 
     <button onclick="add()">Click me</button>
+    <button onclick="add2(6,6)">Click Me </button>
+    <button onclick="call_add()">ADD3</button>
+    <button onclick="call1_add()">Click Me </button>
+
 
     <script>
 
@@ -54,6 +58,53 @@
 
         }
 
+        //function with arguments but no return
+        //abha input dinu pardena
+
+     
+        function add2(a,b) {
+            
+            sum = a + b
+
+            document.write("the sum is ", sum)
+        }
+
+        //function without arguments but with returns
+
+
+        function add3() {
+            let a = Number(prompt("Enter value of a"))
+            let b = Number(prompt("Enter value of b"))
+            sum = a + b
+
+
+            return sum
+        }
+
+        
+
+        //abha arko function banyoum to cal above function
+
+        function call_add(){
+            c=add3()//tyo variable ma yo return function ko value ayera baschas
+            document.write("The sum is ",c)
+        }
+
+        //function with argument and return//esma input dine ra output focus garnu parnea only pure function 
+
+        function add4(m,n){
+            sum=m+n
+            return sum
+        }
+
+        function call1_add(){
+            let a = Number(prompt("Enter value of a"))
+            let b = Number(prompt("Enter value of b"))
+            c=add4(a,b)
+            document.write("The sum is ",c)
+        }
+
+      
     </script>
 </body>
 

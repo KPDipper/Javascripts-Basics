@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
 
 
-document.write("<br>")
-document.write("<br>")
+   str="Welcome to Javascript."
+   
+   //concat:to add the strings
+
+   new_str="Hello! "+str
+   document.write("<br>Concat:",new_str)
+
+//    hello+ good monring=hello good morning
+
+concat_str=str.concat("Good evening")
+
+//length
+name="Kshitiz"
+let len=name.length
+document.write(len)
+
+
+//slice
+
+sli="Bottle is here"
+let str1=sli.slice(0,3)//here 0 is starting index and 3 is ending index
+//it doesn't include last index
+document.write("<br>",str1)
+
+let str2=sli.substr(0,5)//here 0 is starting index and 5 is length
+document.write("<br>",str2)
 
 
 
-for(i=1;i<=5;i++){
-    for(j=1;j<=5;j++){
-        document.write(i,",",j,"&nbsp;&nbsp;")
-    }
-   document.write("<br>") 
-}
 
-
-document.write("s<br>")
-document.write("<br>")
-
-for(i=1;i<=7;i++){
-
-    if(i==zp || i ==5){
-        continue
-    }
-    document.write(i)
-}
-
-
-
-//break,continue
-
-
-
+   
     </script>
-    
+
 </body>
+
 </html>
