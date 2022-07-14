@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .typ{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+
+        arr=[1,2,3,"name","address",["a","b","c"],{name:"hello"}]
+
+        document.write(arr)//object ko lagi differnet cha
+        document.write("<br>",arr.length)
+
+
+        fruits=["Apple","Bannana","Orange","Mango","Papaya"]
+        document.write("<br>Orginal Array: ",fruits)
+        document.write("<br>First Member: ",fruits[0])
+        document.write("<br>Last Member: ",fruits[fruits.length-1])
+        document.write("<br>Second Last Member: ",fruits[fruits.length-2])
+
+        //to add member in array:
+
+        //push:add member to the end
+        //unshift:add member to the start
+
+        fruits.push('Guava')
+        document.write("<br>Push Result: ",fruits)
+
+        fruits.unshift("grapes")
+        document.write("<br>Unshift Result: ",fruits)
+
+
+        //to remove from the array
+        //pop:to remove from the end
+        //shift :to remove from the start
+
+        removed_items=fruits.pop()
+        document.write("<br>Pop result: ",removed_items)
+
+        fruits.shift()
+        document.write("<br>shift result: ",fruits)
+
+        //to add or remove from the array:splice
+
+        //splice(index,number,[items to added])//indiex kata bata suru garne ,tespachi
+        //  number le tai kati wota item removed garne,ra baki kati wota item add garne
+
+        //now to remove banana and orange
+        fruits.splice(1,2,"Blackberries","Blackcurrant","Apricots")
+        document.write("<br>Splice: ",fruits)
+
+
+        //sort:here yesma  
+        let sorted_order=fruits.sort()
+        document.write("<br>Sort:",sorted_order)//here esle capital lai agadi rakcha
+
+        let reversed=fruits.reverse()
+        document.write("<br>Reverse:",reversed)
+        
+        //yo mathi ko code sabai orginal array mai kam garne bhyo
+
+        new_fruits=fruits.slice(1,4)//slice le naya array banucha
+        document.write("<br>Slice: ",new_fruits)//here 1 dekhi 3 samma huncha
+
+        //foreach,map,filter,reduce:iniharu le function lincha as parameter:()=>{}
+         //1,2,3,4,5,6,7 cha re array ma then one by one print garcha
+        //map:
+
+        document.write("<br>")
+        document.write("<br>")
+
+      let num=[1,2,3,4,5,6,7]
+
+      num.map((item)=> document.write(item*2,","))
+
+      document.write("<br>")
+
+    //   fruits.map((items)=>  document.write("<li>",items,"</li>"))
+
+      //template literals
+
+      let new_array=fruits.map((items)=>  
+    
+      { return `<li>${items}</li>`}
+      
+      )
+      document.write(new_array)
+
+
+        //filter
+     search= fruits.filter((item)=>
+
+          item.match(/apple/i)
+        
+        )//here curly bracket diye pachi tai return dinai parcha
+
+     document.write("<br>search:",search)
+    </script>
+
+</body>
+</html>

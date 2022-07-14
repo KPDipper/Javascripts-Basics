@@ -12,32 +12,52 @@
     <script>
 
 
-   str="Welcome to Javascript."
-   
-   //concat:to add the strings
-
-   new_str="Hello! "+str
-   document.write("<br>Concat:",new_str)
-
-//    hello+ good monring=hello good morning
-
-concat_str=str.concat("Good evening")
-
-//length
-name="Kshitiz"
-let len=name.length
-document.write(len)
-
-
 //slice
 
 sli="Bottle is here"
-let str1=sli.slice(0,3)//here 0 is starting index and 3 is ending index
+let str1=sli.slice(1)//here 0 is starting index and 3 is ending index
 //it doesn't include last index
 document.write("<br>",str1)
 
 let str2=sli.substr(0,5)//here 0 is starting index and 5 is length
 document.write("<br>",str2)
+
+let str3=sli.substring(0,3)
+document.write("<br>",str3)
+
+let str4=sli.slice(-1)
+document.write("<br>",str4)
+
+
+//index number:
+
+let x="hello there"
+
+let found=x.indexOf("er")
+document.write("<br>IndexOf:",found)
+let ham=x.lastIndexOf("e")
+document.write("<br>Lastindexof",ham)
+
+//replace:
+
+new_str=x.replace("Hello","good morning")//it's case sensitive
+document.write("<br>",new_str)
+
+let a_new="Javascript javascript javascript is coding"
+
+// : / literal template  /
+//i->case sensitive
+//g->global occurence
+//ig->for both
+let ne_str=a_new.replace(/javascript/ig,"Python")
+document.write("<br>",ne_str)
+
+
+//matches:
+let str_4="Hello"
+
+let y=str_4.charAt(2)
+document.write("<br>The charAt is ",y)
 
 
 
