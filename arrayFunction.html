@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        num = [111, 112, 113, 114, 115, 116, 117, 118]
+
+        //The main difference between map and forEach is that the map method returns a new array by
+        // applying the callback function on each element of an array, while the forEach method doesn't return anything.
+        num.forEach((number, i) => {
+            document.write(`<li>${number * number}</li>`)
+        });
+
+        document.write("<br>")
+        num.map((number, i) => {
+            document.write(`${i + 1}. ${3 * number}<br>`)
+        });
+
+        document.write("<br>")
+        document.write("<br>")
+
+        result = num.filter((number) => {//esle return garcha so naya array nanunu parchas
+            return number < 115
+        })
+        document.write("Result: ", result)
+        document.write("<br>")
+        document.write("<br>")
+
+        //find:esle euta matra value dincha first value dincha
+
+        result = num.find(item => item >= 115)
+        document.write("result: ", result)
+
+        document.write("<br>")
+        document.write("<br>")
+
+        //esle kun position  ma cha thapaincha
+        result = num.findIndex(item => item >= 115)
+        document.write("Index: ", result)
+
+        document.write("<br>")
+        document.write("<br>")
+
+        //retrun true or false ,if any value are true then it returns true.yedi sabai false cha bhane false return garcha
+        result = num.some(item => item >= 115)
+        document.write("Some: ", result)
+
+
+        document.write("<br>")
+        document.write("<br>")
+
+        //some ko opposite here yedi sabai condition true cha bahne matra true aucha,if one condition is false then it will return false
+        result = num.every(item => item >= 115)
+        document.write("Some: ", result)
+
+
+        document.write("<br>")
+        document.write("<br>")
+
+        result = " "
+
+        fruits = ["apple", "Bannana", "Orange", "Mango", "Papaya"]
+        search = window.prompt("Enter a fruit name to  search")
+
+        result = fruits.find(item => item.match(search))//here filter garyo bhane esle sab array ma "a" cha tyo return garcha
+        resultIndex = fruits.findIndex(item => item.match(search))
+
+        if (!result) {
+            document.write(`${result} has not been found `)
+        }
+        else {
+            document.write(`${search} has  been found at ${resultIndex + 1}`)
+
+        }
+
+
+
+        // results = ''
+        // fruits = ["apple","banana","orange","mango","papaya"]
+        // search = prompt("Enter a fruit name to search")
+
+        // results = fruits.find(item=>item.match(search))
+        // resultIndex = fruits.findIndex(item=>item.match(search))
+        // if(results){
+        //     document.write(`<br>${results} is found at ${resultIndex+1}`)
+        // }
+        // else{
+        //     document.write(`<br>${search} is not found.`)
+        // }
+        document.write("<br>")
+
+        sum = num.reduce((acc, cur) => {
+            7
+            document.write(`acc=${acc},cur=${cur}<br>`)
+            return acc + cur
+        })
+        document.write("<br>sum: ", sum)
+
+
+        document.write("<br>")
+
+        prod = num.reduce((acc, cur) => {
+            7
+            document.write(`acc=${acc},cur=${cur}<br>`)
+            return acc * cur
+        })
+        document.write("<br>Product: ", prod)
+
+
+    </script>
+</body>
+
+</html>

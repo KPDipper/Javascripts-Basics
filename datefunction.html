@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Functions</title>
+</head>
+<body>
+
+    <h1 id="timer"></h1>
+   
+    <script>
+        let today = new Date()
+        document.write(today)
+        // today = new Date("2020-12-03")//here week ni change huncha
+        // document.write("<br>",today)
+
+
+        hour = today.getHours()
+        document.write("<br>Hours: "+hour)
+
+        minute = today.getMinutes()
+        second = today.getSeconds()
+        document.write("<br>Minutes: "+ minute)
+        document.write("<br>Seconds: "+ second)
+
+        day = today.getDay()//here yesma sunday lai tai array i ndex return garcha whichmeans it will return 0
+        document.write("<br>DAY: " + day)
+
+        date = today.getDate()
+        document.write("<br>Date: "+ date)
+
+        month = today.getMonth()
+        document.write("<br>Month: "+month)
+
+        year = today.getFullYear()
+        document.write("<br>Year: "+year)
+
+
+        // setTimeout(() => {
+            
+        // }, timeout);
+
+
+        setInterval(() => {
+            let today = new Date()
+            hh = today.getHours()
+            mm = today.getMinutes()
+            ss = today.getSeconds()
+            
+            document.getElementById('timer').innerHTML= hh+":"+mm+":"+ss
+
+        }, 1000);
+        </script>
+</body>
+</html>
