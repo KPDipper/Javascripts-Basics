@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- event le trigger garcha kam garna start garna -->
+
+    <button onclick="color_change()"  onmouseenter="change_font_color()" onmouseleave="color_change()" onmouseover="change_font()" 
+    
+    onmouseout="decrease()">Click here</button>
+
+    <div id="container" style="height:500px;width:500px;background-color: yellow;">
+
+    <input type="text" onchange="setheading()" id="input">
+    <h1 id="heading"></h1>
+    <!-- yedi text ma kei change ayo bhane onchange trigger  -->
+    <!-- onkeyup ma tai lekdha ledha change aucha -->
+    <!-- onkeydown -->
+
+    <input type="checkbox" onchange="change_font()">
+</div>
+
+
+
+    <script>
+         const setheading=()=>{
+            document.getElementById('heading').innerHTML=
+            document.getElementById('input').value
+
+
+        }
+        
+        const color_change=()=>{
+            document.getElementById('container').style.backgroundColor="red"
+
+        }
+
+
+        const change_font_color=()=>{
+            document.getElementById('container').style.backgroundColor="blue"
+            
+        }
+
+        const change_font=()=>{
+            document.getElementById('container').style.fontSize="40px"
+        }
+
+        const decrease=()=>{
+            document.getElementById('container').style.fontSize="20px"
+        }
+
+
+    </script>
+    
+</body>
+</html>

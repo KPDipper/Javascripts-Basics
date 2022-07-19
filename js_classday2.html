@@ -9,15 +9,39 @@
 </head>
 
 <body>
-    <button onclick="add()">ADD ME</button>
-    <button onclick="add1(5,6)">ADD ME 1</button>
-    <button onclick="call_add()">ADD ME 2</button>
-
+  
+    <h1 id="timer"></h1>
     <script>
 
-     
+let today=new Date()
+
+document.write(today)
+
+hour=today.getHours()
+document.write(`<br>Hours: ${hour}`)
+
+week=today.getDay()
+document.write(`<br>week: ${week+1}`)
 
 
+setTimeout(()=>{
+
+    document.write("HEllo there")
+},5000)
+
+setInterval(()=>{
+
+    let today=new Date()
+    hour=today.getHours()
+    min=today.getMinutes()
+    sec=today.getSeconds()
+
+    
+document.getElementById("timer").innerHTML=hour+":"+min+":"+sec
+
+
+
+},1000)
     </script>
 
 </body>

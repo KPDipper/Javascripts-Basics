@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image-container{
+            height: 500px;
+            width: 80%;
+            margin: auto;
+            position: relative;
+        }
+        .slider-image{
+            height: 100%;
+            width: 100%;
+        }
+    
+        .left, .right{
+            position: absolute;
+            top: 50%;
+            cursor: pointer;
+            background-color: yellow;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        .left{
+            left:0;
+        }
+    
+        .right{
+            right: 0;
+        }
+    
+        .left:hover, .right:hover{
+            background-color: green;
+            color: yellow;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <img src="" alt="" class="slider-image" id="slider">
+        <button class="left" onclick="previous()">&lt;</button>
+        <button class="right" onclick="next()">&gt;</button>
+    </div>
+
+    
+    <script src="imageslider.html">
+
+
+    </script>
+</body>
+</html>
