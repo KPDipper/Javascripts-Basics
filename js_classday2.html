@@ -9,39 +9,46 @@
 </head>
 
 <body>
-  
-    <h1 id="timer"></h1>
+   
+
+    <button onmouseover="change_font()"> Click me</button>
+    <div id="contain" style="height:300px;width:500px;background-color: blue;margin-top: 40px;">
+        HELLO
+
+        <input id="input" type="text" onchange="setheading()">
+        <h1 id="heading"></h1>
+      
+          </div>
+
     <script>
 
-let today=new Date()
+        const color_change=()=>{
 
-document.write(today)
+            document.getElementById("container").style.backgroundColor="red"
 
-hour=today.getHours()
-document.write(`<br>Hours: ${hour}`)
+        }
+        const change_font_color=()=>{
+            document.getElementById("container").style.fontSize="50px"
+        }
 
-week=today.getDay()
-document.write(`<br>week: ${week+1}`)
+        const decrease=()=>{
+            document.getElementById("container").style.fontSize="20px"
+
+        }
+
+        const change_font=()=>{
+            document.getElementById("contain").style.fontSize="100px"
+
+        }
+
+        const setheading=()=>{
+         
+            document.getElementById("heading").innerHTML=
+            document.getElementById("input").value
+
+        }
 
 
-setTimeout(()=>{
-
-    document.write("HEllo there")
-},5000)
-
-setInterval(()=>{
-
-    let today=new Date()
-    hour=today.getHours()
-    min=today.getMinutes()
-    sec=today.getSeconds()
-
-    
-document.getElementById("timer").innerHTML=hour+":"+min+":"+sec
-
-
-
-},1000)
     </script>
 
 </body>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //synchronus:aile samma code seriall bhai racha
+        //async:euta work na gari kina arko kam garyo bhane affect garcha
+        //euta ko work le arko lai effect garcha bhane async huncha
+
+        // In synchronous operations tasks are performed one at a time and only when one is completed, 
+        // the following is unblocked. 
+        // In other words, you need to wait for a task to finish to move to the next one. 
+
+        // In asynchronous operations, on the other hand, 
+        // you can move to another task before the previous one finishes.
+        //  This way, with asynchronous programming you’re able to deal with multiple requests simultaneously,
+        //   thus completing more tasks in a much shorter period of time.   
+
+
+        //yo tai s ync function bhyo
+        let data=["apple","ball","cat","dog"]
+
+            const show=()=>{
+                setTimeout(() => {
+
+            data.map(item=>{
+                document.write(`<br>${item}</br>`)
+            })
+        }, 2000);
+
+        }
+        
+            
+            const add=(newdata,cb)=>{
+                setTimeout(() => {
+
+            data.push(newdata)
+            cb()
+        }, 2500);
+
+        }
+
+       
+
+        show()
+        document.write("<br>")
+        document.write("<br>")
+
+        add("elephant",show) 
+ 
+    </script>
+    
+</body>
+</html>
