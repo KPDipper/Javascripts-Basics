@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+       
+     //async await le ni promoise return garcha
+
+        let data = ["apple", "ball", "cat", "dog"]
+
+        const show = () => {
+            setTimeout(() => {
+
+                data.map(item => {
+                    document.write(`<br>${item}</br>`)
+                })
+            }, 2000);
+
+        }
+
+
+        const add = (newdata) => {
+            //here yesma promise bhane object nai return huncha
+            //yedi yo work sucess bhyo bahne resolve return garcha
+            //yedi fail bhyo bhane reject return garcha
+            return promise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+
+                    let error = false
+                    if (!error) {
+                        data.push(newdata)
+                        resolve()
+                    }
+                    else {
+
+                        reject(console.log("error occured"))//here yesma console ma gayera hernu 
+
+                    }
+
+                }, 2500);
+
+            })
+        }
+
+  //here yeta call berna tai kun tai function nasake samma arko function nargne teslai tei await garne huncha
+
+  const demo = async()=>{
+
+    await add("elephant")//here jaba samma add hudena show ni hudena
+    show()
+  }
+
+  demo()
+
+
+    </script>
+
+</body>
+
+</html>
